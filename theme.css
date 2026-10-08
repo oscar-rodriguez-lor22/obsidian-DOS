@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Mx437 DOS/v re. ANK16';
+    src: local('Mx437 DOS/v re. ANK16'),
+         url('./assets/Mx437_DOS-V_re_ANK16.ttf') format('truetype');
+}
+
+
+body {
+	/* Fonts */
+	--font-monospace: 'Mx437 DOS/v re. ANK16', monospace;
+    	--font-text: 'Mx437 DOS/v re. ANK16', monospace;
+    	--font-interface: 'Mx437 DOS/v re. ANK16', monospace;
+
+	/* Borders */
+	--border-width: 1px;
+
+	--radius-s: 4px;
+	--radius-m: 8px;
+	--radius-l: 16px;
+	--input-radius: 0px;
+	--tab-radius-active: 4px;
+	--checkbox-radius: 0px;
+	--toggle-radius: 0px;
+	--toggle-thumb-radius: 0px;
+	--slider-thumb-radius: 0px;
+
+}
+
+.theme-dark {
+	/* Custom Color Classes */
+	--color-bg: #000000;
+	--color-fg: #aaaaaa;
+	
+	--color-dark-black: #000000;
+	--color-dark-red: #aa0000;
+	--color-dark-green: #00aa00;
+	--color-dark-yellow: #aa5500;
+	--color-dark-blue: #0000aa;
+	--color-dark-magenta: #aa00aa;
+	--color-dark-cyan: #00aaaa;
+	--color-dark-white: #aaaaaa;
+
+	--color-light-black: #555555;
+	--color-light-red: #ff5555;
+	--color-light-green: #55ff55;
+	--color-light-yellow: #ffff55;
+	--color-light-blue: #5555ff;
+	--color-light-magenta: #ff55ff;
+	--color-light-cyan: #55ffff;
+	--color-light-white: #ffffff;
+	
+	/* Setting Base Color Classes */ 
+	--color-base-00: var(--color-dark-black);
+	--color-base-05: var(--color-light-black);
+	--color-red: var(--color-dark-red);
+	--color-orange: var(--color-dark-yellow);
+	--color-yellow: var(--color-light-yellow);
+	--color-green: var(--color-dark-green);
+	--color-cyan: var(--color-dark-cyan);
+	--color-blue: var(--color-dark-blue);
+	
+	/* Background */
+	--background-primary: var(--color-dark-black);
+	--background-primary-alt: var(--color-dark-black);
+	--background-secondary: var(--color-dark-black);
+	--background-modifier-hover: var(--color-dark-blue);
+	--code-normal: var(--color-light-white);
+	--code-background: var(--color-light-black);	
+	--code-block-background: var(--color-light-black);
+
+	/* Text */
+	--text-normal: var(--color-light-white);
+	--text-muted: var(--color-dark-white);
+
+	--link-color: var(--color-light-cyan);
+	--link-color-hover: var(--color-dark-cyan);
+	--color-accent: var(--color-light-cyan);
+	--caret-color: var(--color-light-white);	
+
+	/* Interactive */
+	--interactive-normal: var(--color-dark-blue);
+	--interactive-hover: var(--color-light-blue);
+}
+
+.cm-header-1, .markdown-rendered h1 { color: var(--color-light-yellow) !important; }
+.cm-header-2, .markdown-rendered h2 { color: var(--color-light-cyan) !important; }
+.cm-header-3, .markdown-rendered h3 { color: var(--color-light-green) !important; }
+.cm-header-4, .markdown-rendered h4 { color: var(--color-light-magenta) !important; }
+.cm-header-5, .markdown-rendered h5 { color: var(--color-light-white) !important; }
+.cm-header-6, .markdown-rendered h6 { color: var(--color-dark-white) !important; }
+
+.callout {
+    background-color: var(--color-dark-black) !important;
+    border: 1px solid var(--color-dark-blue) !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+.callout-title {
+    color: var(--color-light-yellow) !important;
+    font-family: var(--font-monospace) !important;
+}
+
+/* Sidebar backgrounds and active file highlights */
+.nav-files-container,
+.workspace-ribbon,
+.sidebar-toggle-button {
+    background-color: var(--color-dark-black) !important;
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-light-yellow) !important;
+    border-radius: 0px !important;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    background-color: var(--color-light-black) !important;
+    border-radius: 0px !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse !important;
+    border: 1px solid var(--color-dark-white) !important;
+}
+
+th, td {
+    border: 1px solid var(--color-light-black) !important;
+    background-color: var(--color-dark-black) !important;
+}
+
+th {
+    color: var(--color-light-yellow) !important;
+    background-color: var(--color-dark-blue) !important;
+}
+
+/* Modals & Command Palette */
+.modal, 
+.prompt {
+    background-color: var(--color-dark-black) !important;
+    border: 1px solid var(--color-light-white) !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+.prompt-option.is-selected {
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-light-yellow) !important;
+}
+
+/* Square DOS Checkboxes */
+input[type=checkbox] {
+    border-radius: 0px !important;
+    border: 1px solid var(--color-light-white) !important;
+    background-color: var(--color-dark-black) !important;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+}
+
+input[type=checkbox]:checked {
+    background-color: var(--color-light-yellow) !important;
+}
+
+/* Bottom Status Bar */
+.status-bar {
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-light-white) !important;
+    border-top: 1px solid var(--color-light-white) !important;
+    border-radius: 0px !important;
+}
